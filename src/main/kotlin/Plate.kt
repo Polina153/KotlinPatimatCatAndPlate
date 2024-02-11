@@ -8,7 +8,10 @@ class Plate(private var food: Int) {
         println("plate: $food")
     }
 
-    fun decreaseFood(n: Int) {
-        food -= n
+    fun decreaseFoodOnPlate(n: Int):Int {
+        return when(food > n) {
+            true -> (food - n)
+            else -> food
+        }
     }
 }
