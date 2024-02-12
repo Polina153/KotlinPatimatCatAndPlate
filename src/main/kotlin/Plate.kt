@@ -5,13 +5,14 @@ class Plate(private var food: Int) {
     }
 
     fun printInfo() {
+
         println("plate: $food")
     }
 
     fun decreaseFoodOnPlate(n: Int):Int {
-        return when(food > n) {
-            true -> (food - n)
-            else -> food
-        }
+         if(food > n) food -= n
+            else { food }
+        return food
+
     }
 }
